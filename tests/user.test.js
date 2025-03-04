@@ -2,9 +2,8 @@ import request from "supertest";
 import mongoose from "mongoose";
 import app from "../src/app.js";
 import User from "../src/models/user.js";
-import dotenv from "dotenv";
-
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 
 beforeAll(async () => {
     await mongoose.connect("mongodb://localhost:27017/crudTest", {
@@ -22,7 +21,7 @@ afterAll(async () => {
 describe("User API", () => {
     test("Should create a user", async () => {
         const res = await request(app)
-            .post("/users")
+            .post("/users/create")
             .send({ name: "John Doe", email: "john@example.com" });
         expect(res.statusCode).toBe(201);
         expect(res.body.name).toBe("John Doe");
