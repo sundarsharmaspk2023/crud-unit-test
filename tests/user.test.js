@@ -8,8 +8,6 @@ dotenv.config();
 
 beforeAll(async () => {
     await mongoose.connect("mongodb://localhost:27017/crudTest", {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
     });
 });
 
