@@ -4,9 +4,10 @@ import app from "../src/app.js";
 import User from "../src/models/user.js";
 // import dotenv from "dotenv";
 // dotenv.config();
-
+//mongodb+srv://sundarsharmaspk2023:sundarsharmaspk2023@cluster0.k8zqvvn.mongodb.net/crudTest
+//mongodb://localhost:27017/crudTest
 beforeAll(async () => {
-    await mongoose.connect("mongodb://localhost:27017/crudTest", {
+    await mongoose.connect("mongodb+srv://sundarsharmaspk2023:sundarsharmaspk2023@cluster0.k8zqvvn.mongodb.net/crudTest", {
     });
 });
 
